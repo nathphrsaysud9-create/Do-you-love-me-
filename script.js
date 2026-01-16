@@ -31,3 +31,13 @@ function handleYesClick() {
   document.getElementById("questionPage").classList.remove("show");
   document.getElementById("yesPage").classList.add("show");
 }
+function handleYesClick() {
+    document.body.innerHTML = `
+      <h1 class="yay">YAY!!! 💕🎉</h1>
+      <p>You made my day brighter ✨</p>
+      <p>Thank you for saying yes 😊</p>
+      <audio autoplay>
+        <source src="pop.mp3" type="audio/mpeg">
+      </audio>
+    `;
+}
