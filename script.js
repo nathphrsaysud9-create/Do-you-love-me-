@@ -32,12 +32,25 @@ function handleYesClick() {
   document.getElementById("yesPage").classList.add("show");
 }
 function handleYesClick() {
-    document.body.innerHTML = `
-      <h1 class="yay">YAY!!! 💕🎉</h1>
-      <p>You made my day brighter ✨</p>
-      <p>Thank you for saying yes 😊</p>
-      <audio autoplay>
-        <source src="pop.mp3" type="audio/mpeg">
-      </audio>
-    `;
+  document.body.innerHTML = `
+    <h1 class="yay">YAY!!! 💕🎉</h1>
+    <p>You made my day brighter ✨</p>
+    <p>Thank you for saying yes 😊</p>
+  `;
+
+  setInterval(createHeart, 300);
+}
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.innerText = "💖";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "0";
+  heart.style.fontSize = Math.random() * 30 + 20 + "px";
+  heart.style.animation = "floatUp 3s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 3000);
 }
