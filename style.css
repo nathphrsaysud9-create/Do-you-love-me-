@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(255, 182, 193, 0.4);
+}
+
+h1 { color: #ff5d8f; }
+
+button {
+  padding: 15px 35px;
+  font-size: 22px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* เอฟเฟกต์กดปุ่ม */
+button:active {
+  transform: scale(0.9);
+}
+
+/* YES */
+.yes-button {
+  background: linear-gradient(135deg, #ff5d8f, #ff87ab);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 93, 143, 0.4);
+}
+
+/* NO */
+.no-button {
+  background: #f2f2f2;
+  color: #555;
+}
+
+/* ระบบหน้า + อนิเมชัน */
+.page {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.page.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
